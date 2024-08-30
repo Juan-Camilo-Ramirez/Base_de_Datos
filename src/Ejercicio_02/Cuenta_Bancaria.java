@@ -1,6 +1,6 @@
+//Java, Intelillij
 package Ejercicio_02;
 
-import java.io.ByteArrayInputStream;
 
 public class Cuenta_Bancaria {
     long Numero_cuenta;

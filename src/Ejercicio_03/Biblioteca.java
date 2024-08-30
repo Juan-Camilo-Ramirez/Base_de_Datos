@@ -1,3 +1,4 @@
+//Java, Intelillij
 package Ejercicio_03;
 
 import java.util.ArrayList;
@@ -10,11 +11,11 @@ class Biblioteca {
         colección = new ArrayList<>();
     }
 
-    public void agregarLibro(Libro libro) {
+    public void agre_Libro(Libro libro) {
         colección.add(libro);
     }
 
-    public void prestarLibro(String título) {
+    public void pres_Libro(String título) {
         for (Libro libro : colección) {
             if (libro.getTítulo().equalsIgnoreCase(título)) {
                 if (libro.estáDisponible()) {
@@ -29,7 +30,7 @@ class Biblioteca {
         System.out.println("Libro no encontrado en la biblioteca.");
     }
 
-    public void devolverLibro(String título) {
+    public void devol_Libro(String título) {
         for (Libro libro : colección) {
             if (libro.getTítulo().equalsIgnoreCase(título)) {
                 if (!libro.estáDisponible()) {
@@ -61,17 +62,26 @@ class Biblioteca {
         Biblioteca miBiblioteca = new Biblioteca();
 
         Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez");
-        Libro libro2 = new Libro("1984", "George Orwell");
+        Libro libro2 = new Libro("El cantar del miocid", "Anonimo");
         Libro libro3 =new Libro("La María", "Jorge Isaacs");
+        Libro libro4 =new Libro("Las estrellas son negras", "Arnoldo Palacios");
+        Libro libro5 =new Libro("Fabulas y verdades", "Rafael Pombo");
 
-        miBiblioteca.agregarLibro(libro1);
-        miBiblioteca.agregarLibro(libro2);
-        miBiblioteca.agregarLibro(libro3);
+        miBiblioteca.agre_Libro(libro1);
+        miBiblioteca.agre_Libro(libro2);
+        miBiblioteca.agre_Libro(libro3);
+        miBiblioteca.agre_Libro(libro4);
+        miBiblioteca.agre_Libro(libro5);
 
-        miBiblioteca.prestarLibro("1984");
-        miBiblioteca.devolverLibro("1984");
+        miBiblioteca.pres_Libro("El Cantar del miocid");
+        miBiblioteca.pres_Libro("Cien años de soledad");
+        miBiblioteca.pres_Libro("La María");
+        miBiblioteca.devol_Libro("El cantar del miocid");
 
         miBiblioteca.buscarLibros("soledad");
         miBiblioteca.buscarLibros("María");
+        miBiblioteca.buscarLibros("Cantar");
+        miBiblioteca.buscarLibros("estrellas");
+        miBiblioteca.buscarLibros("fabulas");
     }
 }
